@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:59:13 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 11:17:17 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 11:32:47 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,4 +17,5 @@ int	main(void)
 	ft_isalpha_test();
 	ft_isdigit_test();
 	ft_isalnum_test();
+	ft_isascii_test();
 }

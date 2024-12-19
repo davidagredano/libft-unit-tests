@@ -1,7 +1,8 @@
 SRCS = main.c \
        tests/ft_isalpha.c \
        tests/ft_isdigit.c \
-       tests/ft_isalnum.c
+       tests/ft_isalnum.c \
+       tests/ft_isascii.c
 
 OBJS =	$(SRCS:.c=.o)
 
