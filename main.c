@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:59:13 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 12:40:30 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 15:23:35 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,4 +20,5 @@ int	main(void)
 	ft_isascii_test();
 	ft_isprint_test();
 	ft_strlen_test();
+	ft_memset_test();
 }
