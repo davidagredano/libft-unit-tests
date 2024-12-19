@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:42:29 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 11:04:52 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 11:46:56 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	ft_isdigit_test(void)
 	int	i;
 
 	pass = 1;
-	i = 0;
-	while (i <= CHAR_MAX)
+	i = -10;
+	while (i <= CHAR_MAX + 10)
 	{
 		if ((ft_isdigit(i) == 0) != (isdigit(i) == 0))
 		{
