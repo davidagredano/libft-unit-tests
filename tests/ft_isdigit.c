@@ -1,18 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha_test.c                                  :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:42:29 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/18 15:27:49 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 11:04:52 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft_tests.h"
+#include "../libft_tests.h"
 
-void	ft_isalpha_test(void)
+void	ft_isdigit_test(void)
 {
 	int	pass;
 	int	i;
@@ -21,15 +21,15 @@ void	ft_isalpha_test(void)
 	i = 0;
 	while (i <= CHAR_MAX)
 	{
-		if ((ft_isalpha(i) == 0) != (isalpha(i) == 0))
+		if ((ft_isdigit(i) == 0) != (isdigit(i) == 0))
 		{
 			pass = 0;
-			printf("isalpha(%d)=%d ", i, isalpha(i));
-			printf("ft_isalpha(%d)=%d\n", i, ft_isalpha(i));
+			printf("isdigit(%d)=%d ", i, isdigit(i));
+			printf("ft_isdigit(%d)=%d\n", i, ft_isdigit(i));
 		}
 		i++;
 	}
-	printf("ft_isalpha: ");
+	printf("ft_isdigit: ");
 	if (pass)
 		printf("OK\n");
 	else
