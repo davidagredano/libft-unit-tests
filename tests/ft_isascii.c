@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:42:29 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 11:45:57 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:22:08 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,5 @@ void	ft_isascii_test(void)
 		}
 		i++;
 	}
-	printf("ft_isascii: ");
-	if (pass)
-		printf("OK\n");
-	else
-		printf("KO\n");
+	ft_print_test_result("ft_isascii", pass);
 }

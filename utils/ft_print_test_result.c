@@ -1,33 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_print_test_result.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/12/18 12:42:29 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 14:22:26 by dagredan         ###   ########.fr       */
+/*   Created: 2024/12/19 14:16:43 by dagredan          #+#    #+#             */
+/*   Updated: 2024/12/19 14:26:12 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_tests.h"
 
-void	ft_isdigit_test(void)
+void	ft_print_test_result(const char *test_name, int pass)
 {
-	int	pass;
-	int	i;
-
-	pass = 1;
-	i = -10;
-	while (i <= CHAR_MAX + 10)
-	{
-		if ((ft_isdigit(i) == 0) != (isdigit(i) == 0))
-		{
-			pass = 0;
-			printf("isdigit(%d)=%d ", i, isdigit(i));
-			printf("ft_isdigit(%d)=%d\n", i, ft_isdigit(i));
-		}
-		i++;
-	}
-	ft_print_test_result("ft_isdigit", pass);
+	printf("%s:\t", test_name);
+        if (pass)
+                printf("OK\n");
+        else
+                printf("KO\n");
 }

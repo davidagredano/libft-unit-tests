@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 12:01:09 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:29:50 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 #include <ctype.h>
 #include <limits.h>
 #include <stdio.h>
+
+void    ft_print_test_result(const char *test_name, int pass);
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

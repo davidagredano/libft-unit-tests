@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:42:29 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 12:06:00 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/19 14:22:42 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,9 +29,5 @@ void	ft_isprint_test(void)
 		}
 		i++;
 	}
-	printf("ft_isprint: ");
-	if (pass)
-		printf("OK\n");
-	else
-		printf("KO\n");
+	ft_print_test_result("ft_isprint", pass);
 }
