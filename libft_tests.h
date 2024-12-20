@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 10:57:43 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/20 11:46:55 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,7 @@ size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
 void	ft_bzero(void *s, size_t n);
 void	*ft_memcpy(void *dest, const void *src, size_t n);
+void	*ft_memmove(void *dest, const void *src, size_t n);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -40,5 +41,6 @@ void	ft_strlen_test(void);
 void	ft_memset_test(void);
 void	ft_bzero_test(void);
 void	ft_memcpy_test(void);
+void	ft_memmove_test(void);
 
 #endif
