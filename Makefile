@@ -6,7 +6,8 @@ SRCS = main.c \
        tests/ft_isascii.c \
        tests/ft_isprint.c \
        tests/ft_strlen.c \
-       tests/ft_memset.c
+       tests/ft_memset.c \
+       tests/ft_bzero.c
 
 OBJS =	$(SRCS:.c=.o)
 

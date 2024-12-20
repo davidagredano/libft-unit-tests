@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 14:58:22 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/20 10:32:01 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ int	ft_isascii(int c);
 int	ft_isprint(int c);
 size_t	ft_strlen(const char *s);
 void	*ft_memset(void *s, int c, size_t n);
+void	ft_bzero(void *s, size_t n);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -36,5 +37,6 @@ void	ft_isascii_test(void);
 void	ft_isprint_test(void);
 void	ft_strlen_test(void);
 void	ft_memset_test(void);
+void	ft_bzero_test(void);
 
 #endif
