@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 16:36:57 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/20 10:35:17 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static int	ft_assert(void *s1, void *s2, int c, size_t n)
 	}
 	memset(s1, c, n);
 	ft_memset(s2, c, n);
-	if (strncmp((char *) s1, (char *) s2, n) != 0)
+	if (memcmp(s1, s2, n) != 0)
 	{
 		pass = 0;
 		printf("Error: ");
