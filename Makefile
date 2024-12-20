@@ -10,7 +10,8 @@ SRCS = main.c \
        tests/ft_bzero.c \
        tests/ft_memcpy.c \
        tests/ft_memmove.c \
-       tests/ft_strlcpy.c
+       tests/ft_strlcpy.c \
+       tests/ft_strlcat.c
 
 OBJS =	$(SRCS:.c=.o)
 
@@ -29,7 +30,7 @@ all: ${NAME}
 $(NAME): $(OBJS)
 	$(CC) $^ $(LOPTS) -o $@ -lbsd
 
-%.o: %.c
+%.o: %.c libft.h Makefile
 	$(CC) -c $(WOPTS) -o $@ $<
 
 clean: 
