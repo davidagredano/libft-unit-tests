@@ -9,7 +9,8 @@ SRCS = main.c \
        tests/ft_memset.c \
        tests/ft_bzero.c \
        tests/ft_memcpy.c \
-       tests/ft_memmove.c
+       tests/ft_memmove.c \
+       tests/ft_strlcpy.c
 
 OBJS =	$(SRCS:.c=.o)
 
@@ -26,7 +27,7 @@ LOPTS =	-L../libft -lft
 all: ${NAME}
 
 $(NAME): $(OBJS)
-	$(CC) $^ $(LOPTS) -o $@
+	$(CC) $^ $(LOPTS) -o $@ -lbsd
 
 %.o: %.c
 	$(CC) -c $(WOPTS) -o $@ $<

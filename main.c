@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:59:13 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 11:47:04 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/20 12:26:06 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,4 +24,5 @@ int	main(void)
 	ft_bzero_test();
 	ft_memcpy_test();
 	ft_memmove_test();
+	ft_strlcpy_test();
 }
