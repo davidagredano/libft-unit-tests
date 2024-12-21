@@ -1,5 +1,5 @@
 SRCS = main.c \
-       utils/ft_print_test_result.c \
+	   utils/ft_log_result.c \
        tests/ft_isalpha.c \
        tests/ft_isdigit.c \
        tests/ft_isalnum.c \

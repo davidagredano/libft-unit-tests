@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 15:27:01 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:12:00 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,5 +103,5 @@ void	ft_strlcpy_test(void)
 	if (!ft_assert_return(dst_std, dst_mine, "hello", 0))
 		pass = 0;
 
-	ft_print_test_result("ft_strlcpy", pass);
+	ft_log_result_test("ft_strlcpy", pass);
 }

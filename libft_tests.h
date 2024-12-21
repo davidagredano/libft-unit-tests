@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 15:39:48 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:33:25 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,14 @@
 
 #include <ctype.h>
 #include <limits.h>
+#include <stdbool.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 #include <bsd/string.h>
 
-void    ft_print_test_result(const char *test_name, int pass);
+void    ft_log_result_test(const char *test_name, bool pass);
+void    ft_log_result_str(char *expected, char *result, bool pass);
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);

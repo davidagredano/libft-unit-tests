@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 11:19:09 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:12:11 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,5 +57,5 @@ void    ft_memcpy_test(void)
 	if (!ft_assert(dest_std, dest_mine, (void *) "hello world", 20))
 		pass = 0;
 
-	ft_print_test_result("ft_memcpy", pass);
+	ft_log_result_test("ft_memcpy", pass);
 }

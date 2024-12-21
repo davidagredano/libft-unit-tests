@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/20 10:44:22 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:09:50 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,5 +53,5 @@ void    ft_bzero_test(void)
 	if (!ft_assert(s1, s2, 42))
 		pass = 0;
 
-	ft_print_test_result("ft_bzero", pass);
+	ft_log_result_test("ft_bzero", pass);
 }

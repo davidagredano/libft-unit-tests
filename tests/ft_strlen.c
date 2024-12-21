@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 12:35:47 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/19 14:25:45 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 11:12:39 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ void	ft_strlen_test(void)
 		}
 		i++;
 	}
-	ft_print_test_result("ft_strlen", pass);
-	
+	ft_log_result_test("ft_strlen", pass);
 }
