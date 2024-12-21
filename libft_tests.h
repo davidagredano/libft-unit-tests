@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 19:03:55 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 19:07:50 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
+char	*ft_strchr(const char *s, int c);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -54,5 +55,6 @@ void	ft_strlcpy_test(void);
 void	ft_strlcat_test(void);
 void	ft_toupper_test(void);
 void	ft_tolower_test(void);
+void	ft_strchr_test(void);
 
 #endif
