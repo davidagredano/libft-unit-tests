@@ -41,5 +41,5 @@ fclean: clean
 
 re: fclean all
 
-test: all
+t: re
 	./$(NAME)
