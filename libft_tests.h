@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 13:55:17 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 17:45:49 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n);
 void	*ft_memmove(void *dest, const void *src, size_t n);
 size_t	ft_strlcpy(char *dst, const char *src, size_t size);
 size_t	ft_strlcat(char *dst, const char *src, size_t size);
+int		ft_toupper(int c);
+int		ft_tolower(int c);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -50,5 +52,7 @@ void	ft_memcpy_test(void);
 void	ft_memmove_test(void);
 void	ft_strlcpy_test(void);
 void	ft_strlcat_test(void);
+void	ft_toupper_test(void);
+void	ft_tolower_test(void);
 
 #endif

@@ -11,7 +11,9 @@ SRCS = main.c \
        tests/ft_memcpy.c \
        tests/ft_memmove.c \
        tests/ft_strlcpy.c \
-       tests/ft_strlcat.c
+       tests/ft_strlcat.c \
+	   tests/ft_toupper.c \
+	   tests/ft_tolower.c
 
 OBJS =	$(SRCS:.c=.o)
 
