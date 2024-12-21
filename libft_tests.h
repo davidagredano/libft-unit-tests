@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 17:45:49 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 19:03:55 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@
 #include <bsd/string.h>
 
 void    ft_log_result_test(const char *test_name, bool pass);
-void    ft_log_result_str(char *expected, char *result, bool pass);
-void	ft_log_result_nbr(size_t expected, size_t result, bool pass);
+void	ft_log_result_str(char *expected, char *result, char *desc, bool pass);
+void	ft_log_result_nbr(size_t expected, size_t result, char *desc, bool pass);
 
 int	ft_isalpha(int c);
 int	ft_isdigit(int c);
