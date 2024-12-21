@@ -6,15 +6,15 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 11:12:00 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 18:49:17 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_tests.h"
 
-int	ft_assert_dest(char *dst_std, char *dst_mine, char *src, size_t size)
+static bool	ft_assert_dest(char *dst_std, char *dst_mine, char *src, size_t size)
 {
-	int	pass;
+	bool	pass;
 
 	pass = 1;
 	dst_std = malloc(100);
@@ -44,7 +44,7 @@ int	ft_assert_dest(char *dst_std, char *dst_mine, char *src, size_t size)
 	return (pass);
 }
 
-size_t	ft_assert_return(char *dst_std, char *dst_mine, char *src, size_t size)
+static bool	ft_assert_return(char *dst_std, char *dst_mine, char *src, size_t size)
 {
 	size_t	ret_val_std;
 	size_t	ret_val_mine;
