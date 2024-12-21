@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 15:06:04 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 17:51:50 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,8 +22,8 @@ static int	ft_assert_dest(char *test_description, char *src, size_t size)
 	ft_strlcat(dst_mine, src, size);
 
 	if (strncmp(dst_std, dst_mine, size) != 0) pass = 0;
-	printf("- %s:\n", test_description);
-	ft_log_result_str(dst_std, dst_mine, pass);
+	//printf("- %s:\n", test_description);
+	//ft_log_result_str(dst_std, dst_mine, pass);
 
 	return (pass);
 }
@@ -38,8 +38,8 @@ static size_t	ft_assert_return(char *test_description, char *src, size_t size)
 	size_t ret_mine = ft_strlcat(dst_mine, src, size);
 
 	if (ret_std != ret_mine) pass = 0;
-	printf("- %s:\n", test_description);
-	ft_log_result_nbr(ret_std, ret_mine, pass);
+	//printf("- %s:\n", test_description);
+	//ft_log_result_nbr(ret_std, ret_mine, pass);
 
 	return (pass);
 }
