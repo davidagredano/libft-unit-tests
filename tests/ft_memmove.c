@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 12:34:26 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/21 13:09:16 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,8 +45,10 @@ static int	ft_assert_dest(void *src, size_t n)
 	if (memcmp(dest_std, dest_mine, n) != 0)
 		pass = 0;
 
+	/*
 	printf("Assert dest - ");
 	ft_log_result_str((char *) dest_std, (char *) dest_mine, pass);
+	*/
 
 	return (pass);
 }
@@ -76,6 +78,8 @@ static int	ft_test_overlapping(char *prev_ptr)
 	if (memcmp(src_std, src_mine, 5) != 0)
 		pass = 0;
 
+	/*
 	printf("Assert dest (overlapping) - ");
 	ft_log_result_str((char *) src_std, (char *) src_mine, pass);
+	*/
 }
