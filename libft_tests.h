@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 22:57:44 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/22 10:35:15 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
 int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *big, const char *little, size_t len);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -65,5 +66,6 @@ void	ft_strrchr_test(void);
 void	ft_strncmp_test(void);
 void	ft_memchr_test(void);
 void	ft_memcmp_test(void);
+void	ft_strnstr_test(void);
 
 #endif

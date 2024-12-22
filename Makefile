@@ -18,7 +18,8 @@ SRCS = main.c \
 	   tests/ft_strrchr.c \
 	   tests/ft_strncmp.c \
 	   tests/ft_memchr.c \
-	   tests/ft_memcmp.c
+	   tests/ft_memcmp.c \
+	   tests/ft_strnstr.c
 
 OBJS =	$(SRCS:.c=.o)
 
