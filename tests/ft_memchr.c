@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 22:03:02 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 22:47:47 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:17:29 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ void	ft_memchr_test(void)
 		!ft_assert_return("Looking for 'c' in the initial 4 bytes", s, 'c', 4) ||
 		!ft_assert_return("Looking for 'e' in the initial 3 bytes", s, 'e', 3) ||
 		!ft_assert_return("Looking for '*' in the initial 512 bytes", s, '*', 512) ||
-		!ft_assert_return("Looking for 0201 in the initial 3 bytes", s2, 0201, 3))
+		!ft_assert_return("Looking for 0201 in the initial 3 bytes", (char *) s2, 0201, 3))
 		pass = 0;
 
 	ft_log_result_test("ft_memchr", pass);
