@@ -21,7 +21,8 @@ SRCS = main.c \
 	   tests/ft_memcmp.c \
 	   tests/ft_strnstr.c \
 	   tests/ft_atoi.c \
-	   tests/ft_calloc.c
+	   tests/ft_calloc.c \
+	   tests/ft_strdup.c
 
 OBJS =	$(SRCS:.c=.o)
 

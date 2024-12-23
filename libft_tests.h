@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 13:25:46 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 16:47:48 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,6 +48,7 @@ int		ft_memcmp(const void *s1, const void *s2, size_t n);
 char	*ft_strnstr(const char *big, const char *little, size_t len);
 int		ft_atoi(const char *nptr); 
 void	*ft_calloc(size_t nmemb, size_t size);
+char	*ft_strdup(const char *s);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -71,5 +72,6 @@ void	ft_memcmp_test(void);
 void	ft_strnstr_test(void);
 void	ft_atoi_test(void);
 void	ft_calloc_test(void);
+void	ft_strdup_test(void);
 
 #endif
