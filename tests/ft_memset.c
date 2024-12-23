@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 11:12:24 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 16:23:16 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,8 @@ void    ft_memset_test(void)
 	if (!ft_assert(s1, s2, ' ', 7))
 		pass = 0;
 	if (!ft_assert(s1, s2, '\0', 3))
+		pass = 0;
+	if (!ft_assert(s1, s2, '\0', 0))
 		pass = 0;
 
 	ft_log_result_test("ft_memset", pass);
