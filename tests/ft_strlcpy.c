@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 18:49:17 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 17:26:15 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,13 +32,11 @@ static bool	ft_assert_dest(char *dst_std, char *dst_mine, char *src, size_t size
 		printf("Exected '%s' got '%s'\n", dst_std, dst_mine);
 		pass = 0;
 	}
-	/*
 	else
 	{
 		printf("Pass:\t");
 		printf("Exected '%s' got '%s'\n", dst_std, dst_mine);
 	}
-	*/
 	free(dst_std);
 	free(dst_mine);
 	return (pass);
@@ -66,13 +64,11 @@ static bool	ft_assert_return(char *dst_std, char *dst_mine, char *src, size_t si
 		printf("Exected '%zu' got '%zu'\n", ret_val_std, ret_val_mine);
 		pass = 0;
 	}
-	/*
 	else
 	{
 		printf("Pass:\t");
 		printf("Exected '%zu' got '%zu'\n", ret_val_std, ret_val_mine);
 	}
-	*/
 	free(dst_std);
 	free(dst_mine);
 	return (pass);
@@ -94,6 +90,10 @@ void	ft_strlcpy_test(void)
 		pass = 0;
 	if (!ft_assert_dest(dst_std, dst_mine, "hello", 12))
 		pass = 0;
+	if (!ft_assert_return(dst_std, dst_mine, "hello", 0))
+		pass = 0;
+	if (!ft_assert_dest(dst_std, dst_mine, "", 10))
+		pass = 0;
 	if (!ft_assert_return(dst_std, dst_mine, "hello", 6))
 		pass = 0;
 	if (!ft_assert_return(dst_std, dst_mine, "hello", 2))
@@ -101,6 +101,8 @@ void	ft_strlcpy_test(void)
 	if (!ft_assert_return(dst_std, dst_mine, "hello", 12))
 		pass = 0;
 	if (!ft_assert_return(dst_std, dst_mine, "hello", 0))
+		pass = 0;
+	if (!ft_assert_return(dst_std, dst_mine, "", 10))
 		pass = 0;
 
 	ft_log_result_test("ft_strlcpy", pass);
