@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:14:22 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 11:53:24 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:14:45 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ static bool	ft_assert_return(char *desc, const char *nptr)
 	int ret_mine = ft_atoi(nptr);
 
 	if (ret_std != ret_mine) pass = 0;
-	ft_log_result_int(ret_std, ret_mine, desc, pass);
+	//ft_log_result_int(ret_std, ret_mine, desc, pass);
 
 	return (pass);
 }
