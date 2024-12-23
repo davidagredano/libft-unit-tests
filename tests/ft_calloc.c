@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 13:29:58 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 16:41:47 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 17:13:31 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,8 @@ static bool	ft_assert_return(char *desc, size_t nmemb, size_t size)
 	void *ret_mine = ft_calloc(nmemb, size);
 
 	if ((memcmp(ret_std, ret_mine, nmemb * size)) != 0) pass = 0;
-	ft_log_result_str((char *) ret_std, (char *) ret_mine, desc, pass);
-	printf("std=%p mine=%p\n", ret_std, ret_mine);
-	printf("%zu\n", (size_t) -1);
+	//ft_log_result_str((char *) ret_std, (char *) ret_mine, desc, pass);
+	//printf("std=%p mine=%p\n", ret_std, ret_mine);
 	//Max size_t: 18446744073709551615
 
 	free(ret_std);
