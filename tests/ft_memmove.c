@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 13:09:16 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/23 12:09:44 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,17 +59,17 @@ static int	ft_test_overlapping(char *prev_ptr)
 	char	src_mine[16] = "hello world";
 	int		pass = 1;
 
-	if (prev_ptr == "src")
+	if (strcmp(prev_ptr, "src") == 0)
 	{
 		memmove(&src_std[6], src_std, 5);
 		ft_memmove(&src_mine[6], src_mine, 5);
 	}
-	else if (prev_ptr == "dest")
+	else if (strcmp(prev_ptr, "dest") == 0)
 	{
 		memmove(src_std, &src_std[6], 5);
 		ft_memmove(src_mine, &src_std[6], 5);
 	}
-	else if (prev_ptr == "same")
+	else if (strcmp(prev_ptr, "same") == 0)
 	{
 		memmove(src_std, src_std, 5);
 		ft_memmove(src_mine, src_std, 5);
@@ -82,4 +82,6 @@ static int	ft_test_overlapping(char *prev_ptr)
 	printf("Assert dest (overlapping) - ");
 	ft_log_result_str((char *) src_std, (char *) src_mine, pass);
 	*/
+
+	return (pass);
 }
