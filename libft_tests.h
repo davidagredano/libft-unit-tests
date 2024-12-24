@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/24 10:32:06 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/24 15:30:53 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ void	*ft_calloc(size_t nmemb, size_t size);
 char	*ft_strdup(const char *s);
 char	*ft_substr(char const *s, unsigned int start, size_t len);
 char	*ft_strtrim(char const *s1, char const *set);
+char	**ft_split(char const *s, char c);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -77,5 +78,6 @@ void	ft_calloc_test(void);
 void	ft_strdup_test(void);
 void	ft_substr_test(void);
 void	ft_strtrim_test(void);
+void	ft_split_test(void);
 
 #endif
