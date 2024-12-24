@@ -23,7 +23,8 @@ SRCS = main.c \
 	   tests/ft_atoi.c \
 	   tests/ft_calloc.c \
 	   tests/ft_strdup.c \
-	   tests/ft_substr.c
+	   tests/ft_substr.c \
+	   tests/ft_strtrim.c
 
 OBJS =	$(SRCS:.c=.o)
 
