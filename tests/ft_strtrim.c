@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/24 10:33:14 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/24 15:40:10 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/26 19:54:16 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,6 +36,7 @@ void	ft_strtrim_test(void)
 		!ft_assert("'..--::+::--..' '-.'", "..--::+::--..", "::+::", "-.") ||
 		!ft_assert("'Hi' ''", "Hi", "Hi", "") ||
 		!ft_assert("'' '-+'", "", "", "-+") ||
+		!ft_assert("'0000' '0'", "0000", "", "0") ||
 		!ft_assert("'Hi' 'hdsgfg'", "Hi", "Hi", "hdsgfg"))
 		pass = 0;
 
