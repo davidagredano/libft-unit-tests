@@ -24,6 +24,7 @@ SRCS = main.c \
 	   tests/ft_calloc.c \
 	   tests/ft_strdup.c \
 	   tests/ft_substr.c \
+	   tests/ft_strjoin.c \
 	   tests/ft_strtrim.c \
 	   tests/ft_split.c
 
