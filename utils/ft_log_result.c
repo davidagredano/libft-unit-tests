@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:16:43 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 19:53:12 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 20:56:35 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	ft_log_list_contents(t_list *begin)
 {
 	size_t	i;
 
+	printf("\n");
 	i = 0;
 	while (begin)
 	{
