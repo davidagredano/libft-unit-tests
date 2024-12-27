@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 12:45:16 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 12:58:22 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*));
 void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 void	ft_putendl_fd(char *s, int fd);
+void	ft_putnbr_fd(int n, int fd);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -94,5 +95,6 @@ void	ft_striteri_test(void);
 void	ft_putchar_fd_test(void);
 void	ft_putstr_fd_test(void);
 void	ft_putendl_fd_test(void);
+void	ft_putnbr_test(void);
 
 #endif
