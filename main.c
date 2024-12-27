@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:59:13 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/26 20:04:19 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/26 20:17:10 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,4 +41,5 @@ int	main(void)
 	ft_strjoin_test();
 	ft_strtrim_test();
 	ft_split_test();
+	ft_itoa_test();
 }

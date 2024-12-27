@@ -26,7 +26,8 @@ SRCS = main.c \
 	   tests/ft_substr.c \
 	   tests/ft_strjoin.c \
 	   tests/ft_strtrim.c \
-	   tests/ft_split.c
+	   tests/ft_split.c \
+	   tests/ft_itoa.c
 
 OBJS =	$(SRCS:.c=.o)
 
