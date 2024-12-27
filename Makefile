@@ -33,7 +33,8 @@ SRCS = main.c \
 	   tests/ft_putchar_fd.c \
 	   tests/ft_putstr_fd.c \
 	   tests/ft_putendl_fd.c \
-	   tests/ft_putnbr_fd.c
+	   tests/ft_putnbr_fd.c \
+	   tests/bonus.c
 
 OBJS =	$(SRCS:.c=.o)
 

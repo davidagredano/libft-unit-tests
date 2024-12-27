@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:16:43 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 21:23:39 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 19:53:12 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,4 +33,17 @@ void	ft_log_result_int(int expected, int result, char *desc, bool pass)
 {
 	printf("%s %s\n", pass ? "\e[32mPASS\e[0m" : "\e[31mERROR\e[0m", desc);
 	printf("- Exected %d got %d\n", expected, result);
+}
+
+void	ft_log_list_contents(t_list *begin)
+{
+	size_t	i;
+
+	i = 0;
+	while (begin)
+	{
+		printf("Node %zu content: %s\n", i, (char *) begin->content);
+		begin = begin->next;
+		i++;
+	}
 }
