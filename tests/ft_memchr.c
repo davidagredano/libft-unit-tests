@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 22:03:02 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 12:17:29 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 21:01:57 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static bool	ft_assert_return(char *desc, char *s, int c, size_t n)
 void	ft_memchr_test(void)
 {
 	int		pass = 1;
-	char	s[] = "The memchr() function scans the initial n bytes of the memory area pointed to by s for the first instance of c. Both c and the bytes of the memory area pointed to by s are interpreted as unsigned char.";
+	char	*s = "The memchr() function scans the initial n bytes of the memory area pointed to by s for the first instance of c. Both c and the bytes of the memory area pointed to by s are interpreted as unsigned char.";
 	unsigned char	s2[5];
 	s2[0] = 0200;
 	s2[1] = 0201;
