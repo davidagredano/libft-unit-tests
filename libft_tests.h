@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 11:22:10 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 12:03:04 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 #include <stdlib.h>
 #include <string.h>
 #include <bsd/string.h>
+#include <unistd.h>
 
 void    ft_log_result_test(const char *test_name, bool pass);
 void	ft_log_result_str(char *expected, char *result, char *desc, bool pass);
@@ -56,6 +57,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putstr_fd(char *s, int fd);
 
 void	ft_isalpha_test(void);
 void	ft_isdigit_test(void);
@@ -87,5 +89,6 @@ void	ft_split_test(void);
 void	ft_itoa_test(void);
 void	ft_strmapi_test(void);
 void	ft_striteri_test(void);
+void	ft_putstr_fd_test(void);
 
 #endif
