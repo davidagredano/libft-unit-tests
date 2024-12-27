@@ -30,6 +30,7 @@ SRCS = main.c \
 	   tests/ft_itoa.c \
 	   tests/ft_strmapi.c \
 	   tests/ft_striteri.c \
+	   tests/ft_putchar_fd.c \
 	   tests/ft_putstr_fd.c
 
 OBJS =	$(SRCS:.c=.o)

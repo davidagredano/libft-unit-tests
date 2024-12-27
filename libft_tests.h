@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/18 12:40:36 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 12:03:04 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/27 12:25:27 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,6 +57,7 @@ char	**ft_split(char const *s, char c);
 char	*ft_itoa(int n);
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 void	ft_striteri(char *s, void (*f)(unsigned int, char*));
+void	ft_putchar_fd(char c, int fd);
 void	ft_putstr_fd(char *s, int fd);
 
 void	ft_isalpha_test(void);
@@ -89,6 +90,7 @@ void	ft_split_test(void);
 void	ft_itoa_test(void);
 void	ft_strmapi_test(void);
 void	ft_striteri_test(void);
+void	ft_putchar_fd_test(void);
 void	ft_putstr_fd_test(void);
 
 #endif
