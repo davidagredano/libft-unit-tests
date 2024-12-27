@@ -40,7 +40,7 @@ OBJS =	$(SRCS:.c=.o)
 
 NAME =	libft_tests
 
-CC = 	cc
+CC = cc
 
 WOPTS =	-Wall -Wextra -Werror
 
@@ -53,8 +53,8 @@ all: ${NAME}
 $(NAME): $(OBJS)
 	$(CC) $^ $(LOPTS) -o $@ -lbsd
 
-%.o: %.c libft.h Makefile
-	$(CC) -c $(WOPTS) -o $@ $<
+%.o: %.c
+	$(CC) -c -o $@ $<
 
 clean: 
 	$(RM) $(OBJS)
@@ -66,3 +66,6 @@ re: fclean all
 
 t: re
 	./$(NAME)
+
+valgrind: re
+	valgrind --leak-check=full --track-origins=yes $(NAME)
