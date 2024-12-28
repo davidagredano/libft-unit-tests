@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:38:25 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/28 11:08:27 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/28 12:51:35 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,6 +54,15 @@ static bool	ft_test(void *s1, void *s2, void *s3)
 	printf("List size: %d\n", ft_lstsize(begin));
 	printf("Last node content: %s\n", (char *) ft_lstlast(begin)->content);
 
+	//ft_lstclear (7) 
+	printf("\nTrying to clear the list...\n");
+	ft_lstclear(&begin, &ft_del_content);
+	
+	//log list + ft_lstsize (3)
+	ft_log_list_contents(begin);
+	printf("List size: %d\n", ft_lstsize(begin));
+	
+	/*
 	//free the list 
 	t_list	*next = begin;
 	while (next)
@@ -63,6 +72,7 @@ static bool	ft_test(void *s1, void *s2, void *s3)
 		free(begin);
 		begin = next;
 	}
+	*/
 	return (pass);
 	
 }
