@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:38:25 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/28 12:51:35 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/28 13:52:50 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,16 @@ static void	ft_del_content(void *content)
 	if (content == NULL)
 		return ;
 	free(content);
+}
+
+static void	ft_replace_content(void *content)
+{
+	char *str_content = (char *) content;
+	while (*str_content != 0)
+	{
+		*str_content = '*';
+		str_content++;
+	}
 }
 
 static bool	ft_test(void *s1, void *s2, void *s3)
@@ -37,6 +47,15 @@ static bool	ft_test(void *s1, void *s2, void *s3)
 	//ft_lstadd_back (5)
 	t_list *new2 = ft_lstnew(strdup(s3));
 	ft_lstadd_back(&begin, new2);
+
+	//log list + ft_lstsize (3) + ft_lstlast (4)
+	ft_log_list_contents(begin);
+	printf("List size: %d\n", ft_lstsize(begin));
+	printf("Last node content: %s\n", (char *) ft_lstlast(begin)->content);
+
+	//ft_lstiter (8)
+	printf("\nTrying to use lstiter to replace all content...\n");
+	ft_lstiter(begin, &ft_replace_content);
 
 	//log list + ft_lstsize (3) + ft_lstlast (4)
 	ft_log_list_contents(begin);
