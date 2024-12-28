@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:16:43 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 20:56:35 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:19:34 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,9 +41,12 @@ void	ft_log_list_contents(t_list *begin)
 
 	printf("\n");
 	i = 0;
-	while (begin)
+	printf("List begin pointer: %p\n", begin);
+	while (begin != NULL)
 	{
-		printf("Node %zu content: %s\n", i, (char *) begin->content);
+		printf("Node %zu (%p) ", i, begin);
+		printf("->content=%s / ", (char *) begin->content);
+		printf("->next=%p\n", begin->next);
 		begin = begin->next;
 		i++;
 	}
