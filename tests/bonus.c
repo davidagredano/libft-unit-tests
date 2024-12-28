@@ -6,11 +6,18 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 19:38:25 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/28 10:07:46 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/28 11:08:27 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_tests.h"
+
+static void	ft_del_content(void *content)
+{
+	if (content == NULL)
+		return ;
+	free(content);
+}
 
 static bool	ft_test(void *s1, void *s2, void *s3)
 {
@@ -31,13 +38,20 @@ static bool	ft_test(void *s1, void *s2, void *s3)
 	t_list *new2 = ft_lstnew(strdup(s3));
 	ft_lstadd_back(&begin, new2);
 
-	//log list
+	//log list + ft_lstsize (3) + ft_lstlast (4)
 	ft_log_list_contents(begin);
-
-	//ft_lstsize (3)
 	printf("List size: %d\n", ft_lstsize(begin));
+	printf("Last node content: %s\n", (char *) ft_lstlast(begin)->content);
 
-	//ft_lstlast (4)
+	//ft_lstdelone (6)
+	t_list *tmp = begin->next;
+	printf("\nTrying to delete the first node...\n");
+	ft_lstdelone(begin, &ft_del_content);
+	begin = tmp;
+
+	//log list + ft_lstsize (3) + ft_lstlast (4)
+	ft_log_list_contents(begin);
+	printf("List size: %d\n", ft_lstsize(begin));
 	printf("Last node content: %s\n", (char *) ft_lstlast(begin)->content);
 
 	//free the list 
@@ -50,6 +64,7 @@ static bool	ft_test(void *s1, void *s2, void *s3)
 		begin = next;
 	}
 	return (pass);
+	
 }
 
 void	ft_bonus_test(void)

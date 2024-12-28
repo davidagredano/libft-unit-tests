@@ -68,4 +68,4 @@ t: re
 	./$(NAME)
 
 valgrind: re
-	valgrind --leak-check=full --track-origins=yes $(NAME)
+	valgrind --leak-check=full --track-origins=yes ./$(NAME)
