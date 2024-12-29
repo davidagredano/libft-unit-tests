@@ -6,40 +6,30 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 17:51:50 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/29 14:30:02 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../libft_tests.h"
 
-static int	ft_assert_dest(char *test_description, char *src, size_t size)
+static int	ft_test(char *desc, char *dst, char *src, size_t size)
 {
-	char	dst_std[32] = "hello ";
-	char	dst_mine[32] = "hello ";
-	bool	pass = 1;
+	char	dst_std[32];
+	char	dst_mine[32];
+	int	pass = 1;
 
-	strlcat(dst_std, src, size);
-	ft_strlcat(dst_mine, src, size);
-
-	if (strncmp(dst_std, dst_mine, size) != 0) pass = 0;
-	//printf("- %s:\n", test_description);
-	//ft_log_result_str(dst_std, dst_mine, pass);
-
-	return (pass);
-}
-
-static size_t	ft_assert_return(char *test_description, char *src, size_t size)
-{
-	char	dst_std[32] = "hello ";
-	char	dst_mine[32] = "hello ";
-	bool	pass = 1;
+	memset(dst_std, 0, 32);
+	strlcpy(dst_std, dst, 32);
+	memset(dst_mine, 0, 32);
+	strlcpy(dst_mine, dst, 32);
 
 	size_t ret_std = strlcat(dst_std, src, size);
 	size_t ret_mine = ft_strlcat(dst_mine, src, size);
 
+	if (strcmp(dst_std, dst_mine) != 0) pass = 0;
+	//ft_log_result_str(dst_std, dst_mine, desc, pass);
 	if (ret_std != ret_mine) pass = 0;
-	//printf("- %s:\n", test_description);
-	//ft_log_result_nbr(ret_std, ret_mine, pass);
+	//ft_log_result_nbr(ret_std, ret_mine, desc, pass);
 
 	return (pass);
 }
@@ -51,17 +41,13 @@ void	ft_strlcat_test(void)
 	int	pass;
 
 	pass = 1;
-	dst_std = NULL;
-	dst_mine = NULL;
 	
-	if (!ft_assert_dest("Dest with simple test", "world", 32) ||
-		!ft_assert_return("Return value with simple test", "world", 32) ||
-		!ft_assert_dest("Dest with size(9) less than src + dest(12)", "world", 9) ||
-		!ft_assert_return("Return value with size(9) less than src + dest(12)", "world", 9) ||
-		!ft_assert_dest("Dest with size(3) less than src(6)", "world", 3) ||
-		!ft_assert_return("Return value with size(3) less than src(6)", "world", 3) ||
-		!ft_assert_dest("Dest with size 0", "world", 0) ||
-		!ft_assert_return("Return value with size 0", "world", 0))
+	if (!ft_test("'H' 'ello' 0", "H", "hello", 0) ||
+		!ft_test("'hello ' 'world' 32", "hello ", "world", 32) ||
+		!ft_test("'hi ' 'world' 5 (size < src + dest)", "hi ", "world", 5) ||
+		!ft_test("'hello ' 'bye' 3 (size < src)", "hello ", "bye", 3) ||
+		!ft_test("'hello ' 'bye' 5 (size == src)", "hello ", "bye", 5) ||
+		!ft_test("'hi ' 'bye' 0", "hi ", "bye", 0))
 		pass = 0;
 
 	ft_log_result_test("ft_strlcat", pass);
