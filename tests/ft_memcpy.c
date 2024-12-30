@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/21 11:12:11 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/30 12:27:28 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,6 +38,66 @@ static int	ft_assert(void *dest_std, void *dest_mine, void *src, size_t n)
 	return (pass);
 }
 
+void	ft_test_segfault(void)
+{
+	void 	*dest;
+	void	*src;
+	int		n;
+
+	//printf("Test 1: dest=NULL\n");
+	/*
+	dest = 0;
+	if (!(src = strdup("a")))
+	{
+		printf("Malloc failed.\n");
+		return ;
+	}
+	n = 2;
+	printf("memcpy(dest=%p, src=\"%s\", n=%d)\n", dest, (char *) src, n);
+	printf("Should Segmentation fault\n");
+	memcpy(dest, src, 1); // Segmentation fault
+	//ft_memcpy(dest, src, 1); // Should Segmentation fault
+	*/
+
+	//printf("Test 2: src=NULL\n");
+	/*
+	if (!(dest = strdup("a")))
+	{
+		printf("Malloc failed.\n");
+		return ;
+	}
+	src = 0;
+	n = 2;
+	printf("memcpy(dest=\"%s\", src=%p, n=%d)\n", (char *) dest, src, n);
+	printf("Should Segmentation fault\n");
+	memcpy(dest, src, n); // Segmentation fault
+	//ft_memcpy(dest, src, n); // Should Segmentation fault
+	*/
+
+	//printf("Test 3: dest=NULL src=NULL\n");
+	/*
+	dest = 0;
+	src = 0;
+	n = 3;
+	printf("memcpy(dest=%p, src=%p, n=%d)\n", dest, src, n);
+	printf("Should Segmentation fault\n");
+	memcpy(dest, src, n); // Segmentation fault
+	//ft_memcpy(dest, src, n); // Should Segmentation fault
+	*/
+
+	//printf("Test 4: dest=NULL src=NULL n=0\n");
+	/*
+	dest = 0;
+	src = 0;
+	n = 0;
+	printf("memcpy(dest=%p, src=%p, n=%d)\n", dest, src, n);
+	printf("Should return dest\n");
+	void *ret = memcpy(dest, src, n); // Works fine
+	//void *ret = ft_memcpy(dest, src, n); // Should work fine
+	printf("Return val=%p\n", ret);
+	*/
+}
+
 void    ft_memcpy_test(void)
 {
 	int	pass;
@@ -56,6 +116,8 @@ void    ft_memcpy_test(void)
 		pass = 0;
 	if (!ft_assert(dest_std, dest_mine, (void *) "hello world", 20))
 		pass = 0;
+
+	ft_test_segfault();
 
 	ft_log_result_test("ft_memcpy", pass);
 }
