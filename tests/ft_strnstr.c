@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 10:28:57 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/22 11:14:00 by dagredan         ###   ########.fr       */
+/*   Updated: 2024/12/30 13:02:32 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static bool	ft_assert_return(char *desc, char *big, char *little, size_t len)
 void	ft_strnstr_test(void)
 {
 	int		pass = 1;
-	char	s[] = "The strnstr() function.";
+	char	s[] = "The strnstr().";
 	
 	if (!ft_assert_return("'strnstr' 50", s, "strnstr", 50) ||
 		!ft_assert_return("'The' 200", s, "The", 200) ||
@@ -39,8 +39,11 @@ void	ft_strnstr_test(void)
 		!ft_assert_return("'strnstr' 0", s, "strnstr", 0) ||
 		!ft_assert_return("'strnstr' in '' 100", "", "strnstr", 100) ||
 		!ft_assert_return("'' 100", s, "", 100) ||
-		!ft_assert_return("'' in '' 100", "", "", 100) ||
+		!ft_assert_return("'' in '' 20", "", "", 20) ||
 		!ft_assert_return("'' in '' 0", "", "", 0) ||
+		!ft_assert_return("The same pointer 20", s, s, 15) ||
+		!ft_assert_return("The same str 15", s, "The strnstr().", 15) ||
+		!ft_assert_return("The same str 20", s, "The strnstr().", 20) ||
 		!ft_assert_return("'' 100", s, "", 100))
 		pass = 0;
 
