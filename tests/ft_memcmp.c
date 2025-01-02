@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 22:58:33 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 12:25:04 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 22:31:28 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ void	ft_memcmp_test(void)
 		!ft_assert_return("0201 \"A\" 1", (const char *) str, "A", 1) ||
 		!ft_assert_return("ABC AB 3", "ABC", "AB", 3) ||
 		!ft_assert_return("ABC AB 2", "ABC", "AB", 2) ||
+		//!ft_assert_return("NULL AB", NULL, "AB", 3) || //segfault
+		//!ft_assert_return("AB NULL", "AB", NULL, 3) || //segfault
+		//!ft_assert_return("NULL NULL", NULL, NULL, 3) || //segfault
 		!ft_assert_return("ABC DEF 0", "ABC", "DEF", 0))
 		pass = 0;
 
