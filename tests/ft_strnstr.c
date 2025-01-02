@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 10:28:57 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/30 13:02:32 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 23:00:27 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,8 @@ void	ft_strnstr_test(void)
 		!ft_assert_return("The same pointer 20", s, s, 15) ||
 		!ft_assert_return("The same str 15", s, "The strnstr().", 15) ||
 		!ft_assert_return("The same str 20", s, "The strnstr().", 20) ||
+		//!ft_assert_return("'AAA' in NULL 3", NULL, "AAA", 3) || // segfault
+		//!ft_assert_return("NULL in 'AAA' 3", "AAA", NULL, 3) || // segfault
 		!ft_assert_return("'' 100", s, "", 100))
 		pass = 0;
 
