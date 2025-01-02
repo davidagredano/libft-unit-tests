@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 12:09:44 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 22:06:40 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,9 +26,11 @@ void	ft_memmove_test(void)
 	if (!ft_assert_dest((void *) "hello world", 2)) pass = 0;
 	if (!ft_assert_dest((void *) "hello world", 20)) pass = 0;
 	if (!ft_assert_dest((void *) "hello world", 0)) pass = 0;
+	//if (!ft_assert_dest(NULL, 3)) pass = 0; //should segfault
 	if (!ft_test_overlapping("src")) pass = 0;
 	if (!ft_test_overlapping("dest")) pass = 0;
 	if (!ft_test_overlapping("same")) pass = 0;
+
 
 	ft_log_result_test("ft_memmove", pass);
 }
@@ -45,10 +47,8 @@ static int	ft_assert_dest(void *src, size_t n)
 	if (memcmp(dest_std, dest_mine, n) != 0)
 		pass = 0;
 
-	/*
-	printf("Assert dest - ");
-	ft_log_result_str((char *) dest_std, (char *) dest_mine, pass);
-	*/
+	//printf("Assert dest: ");
+	//ft_log_result_str((char *)dest_std, (char *)dest_mine, (char *)src, pass);
 
 	return (pass);
 }
@@ -78,10 +78,8 @@ static int	ft_test_overlapping(char *prev_ptr)
 	if (memcmp(src_std, src_mine, 5) != 0)
 		pass = 0;
 
-	/*
-	printf("Assert dest (overlapping) - ");
-	ft_log_result_str((char *) src_std, (char *) src_mine, pass);
-	*/
+	//printf("Assert dest (overlapping): ");
+	//ft_log_result_str((char *)src_std, (char *)src_mine, (char *)prev_ptr, pass);
 
 	return (pass);
 }
