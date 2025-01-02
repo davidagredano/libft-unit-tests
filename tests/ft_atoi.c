@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 11:14:22 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 12:14:45 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 23:05:02 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,6 +56,7 @@ void	ft_atoi_test(void)
 		!ft_assert_return("'+-123'", "+-123") ||
 		!ft_assert_return("'1 2 3'", "1 2 3") ||
 		!ft_assert_return("'4000000000'", "4000000000") ||
+		//!ft_assert_return("NULL", NULL) || //segfault
 		!ft_assert_return("''", ""))
 		pass = 0;
 
