@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/22 10:28:57 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 17:18:10 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 22:52:31 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_strdup_test(void)
 	
 	if (!ft_assert_return("'Hello word'", "Hello world") ||
 		!ft_assert_return("'Bye'", "Bye") ||
+		//!ft_assert_return("NULL", NULL) || //segmentation fault
 		!ft_assert_return("''", ""))
 		pass = 0;
 
