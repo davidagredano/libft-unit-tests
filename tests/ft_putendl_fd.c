@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/27 11:57:34 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 12:48:47 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/03 11:02:46 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,7 @@ void	ft_putendl_fd_test(void)
 		!ft_test("'HELLO'", "HELLO", STDOUT_FILENO) ||
 		!ft_test("'heLLo'", "heLLo", STDOUT_FILENO) ||
 		!ft_test("'012'", "012", STDOUT_FILENO) ||
+		!ft_test("NULL", NULL, STDOUT_FILENO) ||
 		!ft_test("''", "", STDOUT_FILENO))
 		pass = 0;
 
