@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/23 17:48:41 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 18:47:02 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/03 11:45:18 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ static bool	ft_assert_return(char *desc, const char *s, char *expect, unsigned i
 
 	char *ret_mine = ft_substr(s, start, len);
 
-	if (strcmp(expect, ret_mine) != 0) pass = 0;
+	if (ret_mine && strcmp(expect, ret_mine) != 0) pass = 0;
 	//ft_log_result_str(expect, ret_mine, desc, pass);
 
 	free(ret_mine);
@@ -36,8 +36,10 @@ void	ft_substr_test(void)
 		!ft_assert_return("'Hello' 5 10", "Hello", "", 5, 10) ||
 		!ft_assert_return("'Hello' 6 10", "Hello", "", 5, 10) ||
 		!ft_assert_return("'Hello' 0 10", "Hello", "Hello", 0, 10) ||
+		!ft_assert_return("'Hello' 2 0", "Hello", "", 2, 0) ||
 		!ft_assert_return("'Hello' 0 0", "Hello", "", 0, 0) ||
 		!ft_assert_return("'Bye-bye' 4 3", "Bye-bye", "bye", 4, 3) ||
+		!ft_assert_return("NULL 2 3", NULL, NULL, 2, 3) ||
 		!ft_assert_return("'' 3 2", "", "", 3, 2))
 		pass = 0;
 
