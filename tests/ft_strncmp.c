@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 21:03:21 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/23 12:13:34 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/03 10:18:02 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,9 @@ void	ft_strncmp_test(void)
 		!ft_assert_return("0201 \"A\" 1", (const char *) str, "A", 4) ||
 		!ft_assert_return("ABC AB 3", "ABC", "AB", 3) ||
 		!ft_assert_return("ABC AB 2", "ABC", "AB", 2) ||
+		//!ft_assert_return("ABC (NULL) 3", "ABC", NULL, 3) || //segfault
+		//!ft_assert_return("(NULL) ABC 3", NULL, "ABC", 3) || //segfault
+		//!ft_assert_return("(NULL) (NULL) 3", NULL, NULL, 3) || //segfault
 		!ft_assert_return("ABC DEF 0", "ABC", "DEF", 0))
 		pass = 0;
 
