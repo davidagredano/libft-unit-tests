@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:16:43 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/28 11:19:34 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 14:35:38 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,13 +25,13 @@ void	ft_log_result_str(char *expected, char *result, char *desc, bool pass)
 
 void	ft_log_result_nbr(size_t expected, size_t result, char *desc, bool pass)
 {
-	printf("%s %s\n", pass ? "\e[32mPASS\e[0m" : "\e[31mERROR\e[0m", desc);
+	printf("\n%s %s\n", pass ? "\e[32mPASS\e[0m" : "\e[31mERROR\e[0m", desc);
 	printf("- Exected %zu got %zu\n", expected, result);
 }
 
 void	ft_log_result_int(int expected, int result, char *desc, bool pass)
 {
-	printf("%s %s\n", pass ? "\e[32mPASS\e[0m" : "\e[31mERROR\e[0m", desc);
+	printf("\n%s %s\n", pass ? "\e[32mPASS\e[0m" : "\e[31mERROR\e[0m", desc);
 	printf("- Exected %d got %d\n", expected, result);
 }
 
