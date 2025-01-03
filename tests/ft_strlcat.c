@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/20 12:26:30 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/29 14:30:02 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/03 10:58:37 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,37 @@ static int	ft_test(char *desc, char *dst, char *src, size_t size)
 	return (pass);
 }
 
+static void	ft_test_segfault(void)
+{
+	char	dst[10];
+	strlcpy(dst, "hi", 10);
+
+	//printf("dst precat:  %s\n", dst);
+
+	//strlcat(dst, " world", 10); // WORKS
+	//ft_strlcat(dst, " world", 10); // WORKS
+
+	//strlcat(NULL, "HELLO", 10); // segfault
+	//ft_strlcat(NULL, "HELLO", 10); // segfault
+
+	//strlcat(NULL, "HELLO", 0); // WORKS
+	//ft_strlcat(NULL, "HELLO", 0); // WORKS
+
+	//strlcat(dst, NULL, 10); // segfault
+	//ft_strlcat(dst, NULL, 10); // segfault
+
+	//strlcat(dst, NULL, 0); // segfault
+	//ft_strlcat(dst, NULL, 0); // segfault
+
+	//strlcat(NULL, NULL, 10); // segfault
+	//ft_strlcat(NULL, NULL, 10); // segfault
+
+	//strlcat(NULL, NULL, 0); // segfault
+	//ft_strlcat(NULL, NULL, 0); // segfault
+
+	//printf("dst postcat: %s\n", dst);
+}
+
 void	ft_strlcat_test(void)
 {
 	char	*dst_std;
@@ -49,6 +80,8 @@ void	ft_strlcat_test(void)
 		!ft_test("'hello ' 'bye' 5 (size == src)", "hello ", "bye", 5) ||
 		!ft_test("'hi ' 'bye' 0", "hi ", "bye", 0))
 		pass = 0;
+
+	ft_test_segfault();
 
 	ft_log_result_test("ft_strlcat", pass);
 }
