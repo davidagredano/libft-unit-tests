@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelona.co  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/21 18:30:31 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/27 14:06:51 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/03 10:12:24 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,7 @@ void	ft_strrchr_test(void)
 		!ft_assert_return("Looking for 'r'", s, 'r') ||
 		!ft_assert_return("Looking for '*'", s, '*') ||
 		!ft_assert_return("Looking for 'h' + 256", s, 'h' + 256) ||
+		//!ft_assert_return("Looking for 'a' in NULL", NULL, 'a') || //segfault
 		!ft_assert_return("Looking for '\\0'", s, '\0'))
 		pass = 0;
 
