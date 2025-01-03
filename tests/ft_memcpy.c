@@ -6,7 +6,7 @@
 /*   By: dagredan <dagredan@student.42barcelon      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/12/19 14:39:05 by dagredan          #+#    #+#             */
-/*   Updated: 2024/12/30 12:27:28 by dagredan         ###   ########.fr       */
+/*   Updated: 2025/01/02 16:12:09 by dagredan         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ static int	ft_assert(void *dest_std, void *dest_mine, void *src, size_t n)
 	return (pass);
 }
 
-void	ft_test_segfault(void)
+static void	ft_test_segfault(void)
 {
 	void 	*dest;
 	void	*src;
